@@ -1,0 +1,25 @@
+{
+  "functions": {
+    "predeploy": [
+      "npm --prefix ./functions run lint"
+    ],
+    "source": "functions"
+  },
+  "hosting": {
+    "public": "startbootstrap-agency-gh-pages",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
