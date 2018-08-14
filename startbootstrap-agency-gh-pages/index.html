@@ -26,6 +26,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
+      
+    <!-- ChartJS and Joke Chart JS File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    
 
   </head>
 
@@ -65,7 +69,6 @@
     <header class="masthead">
       <div class="container">
         <div class="header-slides">
-          <!-- TODO -oBruno Salgado :FOLLOW DIRECTIONS FROM W3SCHOOLS SLIDES -->
         </div>
         <div class="intro-text">
           <div class="intro-lead-in">@Stevens Institute of Technology <br> Hoboken <br> New Jersey</div>
@@ -74,10 +77,85 @@
         </div>
       </div>
     </header>
+      
+    <!-- Temporary Headshot-Chart Joke -->
+    <canvas id="joke" width="20" height="8"></canvas>
+    <script>
+      var ctx = document.getElementById("joke").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Athina', 'Aolanie', 'Bruno', 'Christina', 'Concetta', 'Eric', 'Gio', 'Gurpreet', 'Ivette', 'Ivy', 'Tiffany'],
+        datasets: [{
+            label: '# of Headshots Given to Bruno',
+            data: [1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+      </script>
+      
+            <!-- Slideshow container -->
+<div class="slideshow-container">
+<script src="js/mySlides.js"></script>
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="img/shpepics/natconf_fullgroup.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img/shpepics/natconf_fullgroup.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img/shpepics/natconf_fullgroup.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 
     <!-- Events Grid -->
-      
-      
       <section class="bg-light" id="events">
       <div class="container">
         <div class="row">
@@ -343,35 +421,35 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/tlescano.png" alt="">
-              <h4>Tiffany Lescano</h4>
+              <img class="mx-auto rounded-circle" src="img/team/acordero.png" alt="">
+              <h4>Athina Cordero</h4>
               <p class="text-muted">President</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/acordero.png" alt="">
-              <h4>Athina Cordero</h4>
+              <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
+              <h4>Giovanni Duran</h4>
               <p class="text-muted">Vice President</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Xavier Rosario</h4>
+              <img class="mx-auto rounded-circle" src="img/team/ctrinidad.jpg" alt="">
+              <h4>Christina Trinidad</h4>
               <p class="text-muted">Treasurer</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Johnny Aza</h4>
+              <img class="mx-auto rounded-circle" src="img/team/imarte.jpg" alt="">
+              <h4>Ivette Marte</h4>
               <p class="text-muted">Secretary</p>
             </div>
           </div> 
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/bsalgado.png" alt="">
+              <img class="mx-auto rounded-circle" src="img/team/bsalgado.jpg" alt="">
               <h4>Bruno Salgado</h4>
               <p class="text-muted">Chief Web Officer</p>
             </div>
@@ -379,42 +457,42 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Christina Trinidad</h4>
+              <h4>Concetta Spector</h4>
               <p class="text-muted">Recruitment Chair</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Suzett Lee</h4>
+              <img class="mx-auto rounded-circle" src="img/team/edevico.jpg" alt="">
+              <h4>Eric DeVico</h4>
               <p class="text-muted">Corporate Relations</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Giovanni Duran</h4>
+              <h4>Ivy Robalino</h4>
               <p class="text-muted">Internal Relations</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Ivette Marte</h4>
+              <h4>Aolanie Vargas</h4>
               <p class="text-muted">Public Relations</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Emmanuel Coronado</h4>
+              <img class="mx-auto rounded-circle" src="img/team/gsingh.png" alt="">
+              <h4>Gurpreet Singh</h4>
               <p class="text-muted">Academic Chair</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/shpepics-orig/favicon%20-%20pre.png" alt="">
-              <h4>Reuben Martin</h4>
+              <h4>Tiffany Fonque</h4>
               <p class="text-muted">External Relations</p>
             </div>
           </div>
@@ -427,7 +505,7 @@
       </div>
     </section> 
 
-    <!-- Clients -->
+    <!-- Sponsors -->
     <section class="py-5">
       <div class="container">
         <div class="row">
